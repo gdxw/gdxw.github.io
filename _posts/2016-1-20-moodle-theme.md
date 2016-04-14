@@ -29,9 +29,9 @@ theme_name                //如果名字是以大写字母开头，主题将不�
 |   └── script2.js
 ├── lang                   //语言文件
 |   └─ en                  //英语，moodle会根据平台设置的语言去调用对应的语言文件。默认情况下调用en下的语言文件。
-|      └─ theme_name.php   //语言健值对，必须和主题的名字一样。（必须）
+|      └─ theme_theme_name.php   //语言健值对，必须  是theme_主题名。（必须）
 |   └─ zh_CN               //中文，如果平台是中文则会调用zh_CN下的语言文件。
-|      └─ theme_name.php
+|      └─ theme_theme_name.php
 ├── pix                    //图片文件夹，与此主题相关的图片文件     
 |   ├── banner.jpg
 |   └── logo.png  
@@ -72,7 +72,7 @@ javascript文件主要用来放置我们的一些脚本代码，高版本moodle�
 
 #### lang文件夹
 
-lang 文件夹是moodle定义插件必须要有的插件，同时里面的语言主文件必须和插件的名字相同才行。`` en `` 代表的是英文，也是默认的语言形式，`` zh_CN `` 代表的是中文简体；这样设置的目的是满足moodle国际化的要求。所以如果要给多个语种的人用，建议在开发的时候还是要遵循moodle的国际化标准，不要直接写死。
+lang 文件夹是moodle定义插件必须要有的插件，同时里面的语言主文件必须是theme_主题名才行。`` en `` 代表的是英文，也是默认的语言形式，`` zh_CN `` 代表的是中文简体；这样设置的目的是满足moodle国际化的要求。所以如果要给多个语种的人用，建议在开发的时候还是要遵循moodle的国际化标准，不要直接写死。
 
 #### pix文件夹
 
@@ -90,7 +90,7 @@ style文件可以说是整个moodle主题的核心了，在修改moodle主题用
 
 renderer是moodle的渲染器，在moodle主题里面可以直接覆盖掉其它任何渲染器，这样就可以实现moodle模块的自定义修改。比如我们可以直接修改moodle的导航渲染器，来实现自定义导航。同时在很多高级主题里面对moodle的渲染器有大量的修改，一般会在主题的根目录下面建立一个 `` renderers `` 的文件夹，将覆盖后的渲染器放在这个目录下，在 `` renderers.php `` 进行引用。
 
-#### config.php文件 
+#### config.php文件
 
 config.php 是moodle主题的核心，在里面可以设置moodle主题的名字、依赖的父主题、 要加载的css文件、js文件、moodle的模版调用等配置。详情请参考moodle的基本主题  `` bootstrapbase `` 的设置。
 
