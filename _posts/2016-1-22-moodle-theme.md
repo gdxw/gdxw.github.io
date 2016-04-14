@@ -27,7 +27,9 @@ test_theme
 └── version.php
 
 ```
+
 3、在 `` config.php `` 文件中输入如下的php代码
+
 ``` php
 <?php
 
@@ -43,6 +45,7 @@ $THEME->editor_sheets = array();
 
  ?>
 ```
+
 4、在 `` version.php `` 文件中添加如下的php代码
 
 ``` php
@@ -61,7 +64,9 @@ $plugin->dependencies = array(
 */
 ?>
 ```
+
 5、设置 `` theme_test_theme.php ``  文件
+
 ``` php
 <?php
 
@@ -70,6 +75,7 @@ $string['pluginname'] = '测试主题';
  ?>
 ```
 6、一个基本的主题创建完毕，修改一点样式加以区分，我们在主题的 `` test_style.css `` 文件中写入css样式。
+
 ``` css
 
 body{
@@ -77,6 +83,7 @@ body{
 }
 
 ```
+
 7、用管理员账号登录moodle站点，升级moodle平台，将该主题加载进去，并进行应用。应用的路径在 `` 设置 > 网站管理 > 外观 > 主题风格 > 主题选择器 ``。
 
 ## 主题的配置说明
