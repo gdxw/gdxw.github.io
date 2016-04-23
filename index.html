@@ -1,6 +1,101 @@
 ---
-layout: index
+layout: default
 title: 枫林杀的网站
 ---
 
-{% include pagelist.html %}
+<div id="index" class="row">
+	<div class="post-area">
+		<div class="post-list-body">
+			<div post-cate="All">
+				<ul class="pager">
+					{% if paginator.previous_page %}
+						{% if paginator.previous_page == 1 %}
+							<li class="previous">
+								<a href="{{ site.url }}">
+									 &larr; 上一页
+								</a>
+							</li>
+						{% else %}
+							<li class="previous">
+								<a href="{{ site.baseurl }}/page{{ paginator.previous_page }}">
+									&larr; 上一页
+								</a>
+							</li>
+						{% endif %}
+					{% endif %}
+					{% if paginator.next_page %}
+						<li class="next">
+							<a href="{{ site.baseurl}}/page{{ paginator.next_page }}">
+								  下一页 &rarr;
+							</a>
+						</li>	
+					{% endif %}
+				</ul>
+			</div>
+			<ul class="posts list-unstyled">
+			{% for post in paginator.posts %}
+				{% if post.url %}
+					<li>
+						<a href="{{ post.url }}" class="post-list-item"><h2>{{ post.title }}</h2></a>
+
+						<span class="date">{{ post.date | date: "%Y年 %m月 %d日" }}</span>
+						<hr>	
+						<p>{% if post.excerpt.size > 32 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
+							<p> <a href="{{ post.url }}"><span >阅读全文 &raquo; </span></a></p>
+						<hr>			
+					</li>
+				{% endif %}
+			{% endfor %}
+			</ul>
+		</div>
+		<nav>
+			{% if paginator.total_pages > 1 %}
+				<ul class="pagination">
+					{% if paginator.previous_page %}
+						<li>
+							<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+				  	{% else %}
+					  	<li class="disabled">
+							<a href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+				  	{% endif %}
+					
+				  	{% for page in (1..paginator.total_pages) %}
+				    	{% if page == paginator.page %}
+				    		<li class="active">
+				    			<a href="#">{{ page }}</a>
+				    		</li>
+				    	{% elsif page == 1 %}
+				    		<li>
+				    			<a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+				    		</li>  		
+				    	{% else %}
+				    		<li>
+				    			<a href="{{ prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+				    		</li>
+				      	{% endif %}
+				  	{% endfor %}
+
+				  	{% if paginator.next_page %}
+				  		<li>
+				  			<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Next"> &raquo;</a>
+				  		</li>
+				  	{% else %}
+				  		<li class="disabled">
+				  			<a href="#" aria-label="Next"><span> &raquo;</span></a>
+				  		</li>	
+				  	{% endif %}
+				</ul>
+				{% endif %}
+		</nav>
+	</div>
+</div>
+
+
+
+

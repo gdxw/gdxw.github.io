@@ -1,1 +1,21 @@
-exclude:["bower_components","CNAME","README"]
+# permalink: /:year/:month/:day/:title.html
+gems: [jekyll-paginate]
+exclude: ['node_modules','bower_components','src','gulpfile.js','bower.json','package.json','CNAME','README']
+
+paginate: 6
+paginate_path: "page:num"
+
+# 个人信息
+name: 代兴旺
+author: gdxw
+email: d525224259@163.com
+gmail: dxw525224259@gmail.com
+qq: 525224259
+github: gdxw
+
+# 站点信息
+title: 枫林杀的博客
+url: http://www.cotrain.cn
+favicon: /static/img/favicon.ico
+logo: /static/img/logo.png
+

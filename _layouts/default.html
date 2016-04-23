@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="icon" href="{{ site.favicon }}">
+    <meta name="description" content="{{ page.title }} - {{ site.title }} - {{ site.author }}({{ site.email }})">
+    <title>
+      {{ page.title }} - {{ site.title }}
+    </title>
+    <!-- Bootstrap Core CSS -->
+    <link href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/myblogstyle.min.css" rel="stylesheet">
+
+  </head>
+  
+  <body>
+    {% include nav.html %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          {{ content }}
+        </div>
+        <div class="col-md-4">
+            {% include categories.html %} 
+            {% include links.html %}            
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+    <script src="/static/js/lib/require.js" data-main="/static/js/main"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: moodle主题开发介绍2
 category: moodle
 tags: [moodle,theme]

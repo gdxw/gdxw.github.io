@@ -1,11 +1,9 @@
 ---
-layout: page
+layout: post
 title: moodle主题开发介绍1
 category: moodle
 tags: [moodle,theme]
 ---
-
-### 什么是moodle的主题
 moodle主题是控制moodle外观的主要实现方式，通过moodle的主题可以使整个moodle平台的用户体验更好。
 
 ### 一般的moodle主题结构

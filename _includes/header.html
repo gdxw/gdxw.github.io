@@ -1,46 +1,10 @@
-
-<header class="mdl-layout__header mdl-layout__header--scroll">
-  <div class="mdl-layout__header-row">
-    <!-- Title -->
-    <span class="mdl-layout-title">枫林杀的博客</span>
-    <!-- Add spacer, to align navigation to the right -->
-    <div class="mdl-layout-spacer">
-    </div>
-    <!-- Navigation -->
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                mdl-textfield--floating-label mdl-textfield--align-right">
-      <label class="mdl-button mdl-js-button mdl-button--icon"
-             for="fixed-header-drawer-exp">
-        <i class="material-icons">search</i>
-      </label>
-      <div class="mdl-textfield__expandable-holder">
-        <input class="mdl-textfield__input" type="text" name="sample"
-               id="fixed-header-drawer-exp">
+<header>
+    <h1>
+      {{ page.title }}
+      <div class="post-date">
+        <a href="https://github.com/{{ site.github }}/{{ site.github }}.github.io/edit/master/{{ page.path }}" target="_blank">纠错</a>&nbsp;&nbsp;
+      <span class="glyphicon glyphicon-time"></span>
+      {{ page.date | date_to_string }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
       </div>
-    </div>
-    <!-- <nav class="mdl-navigation">
-      <button id="demo-menu-lower-right"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">more_vert</i>
-      </button>
-
-      <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-          for="demo-menu-lower-right">
-        <li class="mdl-menu__item">Some Action</li>
-        <li class="mdl-menu__item">Another Action</li>
-        <li disabled class="mdl-menu__item">Disabled Action</li>
-        <li class="mdl-menu__item">Yet Another Action</li>
-      </ul> -->
-    </nav>
-  </div>
+    </h1>
 </header>
-<div class="mdl-layout__drawer">
-  <span class="mdl-layout-title">站点导航</span>
-  <nav class="mdl-navigation">
-    <a class="mdl-navigation__link" href="#"><i class="material-icons">home</i> 返回首页</a>
-    <a class="mdl-navigation__link" href="">Link</a>
-    <a class="mdl-navigation__link" href="">Link</a>
-    <a class="mdl-navigation__link" href="">Link</a>
-    <a class="mdl-navigation__link" href="">Link</a>
-  </nav>
-</div>

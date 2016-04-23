@@ -1,0 +1,21 @@
+{
+  "name": "gdxwlib",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "gdxw"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "requirejs": "^2.2.0"
+  }
+}
