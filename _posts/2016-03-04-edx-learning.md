@@ -34,7 +34,7 @@ tag: [openedx,笔记]
 
 ### 推荐网站 ###
 
-* http://blog.just4fun.site/category/edx.html
-* https://edustack.org/
-* https://github.com/edx/edx-platform/wiki
-* https://openedx.atlassian.net/wiki/display/OpenOPS/Open+edX+Operations+Home
+* [wuwenjie718的博客](http://blog.just4fun.site/category/edx.html)
+* [edustack](https://edustack.org/)
+* [openedx-github-wiki](https://github.com/edx/edx-platform/wiki)
+* [openedx-wiki](https://openedx.atlassian.net/wiki/display/OpenOPS/Open+edX+Operations+Home)
