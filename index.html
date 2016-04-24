@@ -3,7 +3,7 @@ layout: default
 title: 枫林杀的网站
 ---
 
-<div id="index" class="row">
+<div id="index">
 	<div class="post-area">
 		<div class="post-list-body">
 			<div post-cate="All">
@@ -28,7 +28,7 @@ title: 枫林杀的网站
 							<a href="{{ site.baseurl}}/page{{ paginator.next_page }}">
 								  下一页 &rarr;
 							</a>
-						</li>	
+						</li>
 					{% endif %}
 				</ul>
 			</div>
@@ -39,10 +39,10 @@ title: 枫林杀的网站
 						<a href="{{ post.url }}" class="post-list-item"><h2>{{ post.title }}</h2></a>
 
 						<span class="date">{{ post.date | date: "%Y年 %m月 %d日" }}</span>
-						<hr>	
+						<hr>
 						<p>{% if post.excerpt.size > 32 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
 							<p> <a href="{{ post.url }}"><span >阅读全文 &raquo; </span></a></p>
-						<hr>			
+						<hr>
 					</li>
 				{% endif %}
 			{% endfor %}
@@ -64,7 +64,7 @@ title: 枫林杀的网站
 							</a>
 						</li>
 				  	{% endif %}
-					
+
 				  	{% for page in (1..paginator.total_pages) %}
 				    	{% if page == paginator.page %}
 				    		<li class="active">
@@ -73,7 +73,7 @@ title: 枫林杀的网站
 				    	{% elsif page == 1 %}
 				    		<li>
 				    			<a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-				    		</li>  		
+				    		</li>
 				    	{% else %}
 				    		<li>
 				    			<a href="{{ prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
@@ -88,14 +88,10 @@ title: 枫林杀的网站
 				  	{% else %}
 				  		<li class="disabled">
 				  			<a href="#" aria-label="Next"><span> &raquo;</span></a>
-				  		</li>	
+				  		</li>
 				  	{% endif %}
 				</ul>
 				{% endif %}
 		</nav>
 	</div>
 </div>
-
-
-
-
