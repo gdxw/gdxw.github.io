@@ -1,4 +1,9 @@
-## js事件委托
+---
+layout: post
+title: js事件委托
+category: chrome
+tag: [javascript,事件]
+---
 
 ### 什么是事件委托
 
